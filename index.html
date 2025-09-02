@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryan Teodoro — Portfólio</title>
+  <meta name="description" content="Portfólio de Ryan Teodoro — Estudante de Análise e Desenvolvimento de Sistemas | Fatec Ipiranga" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1724;
+      --muted:#9aa4b2;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:0;
+      font-family:Inter,system-ui,Arial;
+      background: radial-gradient(1200px 400px at 10% 10%, rgba(124,92,255,0.12), transparent),
+                  radial-gradient(800px 300px at 90% 90%, rgba(0,200,255,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:48px 20px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+
+    /* Header / Hero */
+    .hero{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg,var(--glass),var(--glass-2));border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(6px);padding:22px;border-radius:14px}
+    .avatar{
+      width:180px;height:180px;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(255,255,255,0.05);
+      background:linear-gradient(135deg,var(--accent),#00c8ff);
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      transition:transform .35s ease;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar:active{transform:scale(.98)}
+    .hero h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px}
+
+    .actions{display:flex;gap:12px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#3bb0ff);color:#071026}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Sections */
+    section{margin-top:22px}
+    h2{margin:0 0 12px 0}
+    p.lead{color:var(--muted);margin:0 0 18px 0}
+
+    /* Grid for content */
+    .grid-2{display:grid;grid-template-columns:1fr 340px;gap:20px}
+    .card .meta{font-size:14px;color:var(--muted)}
+
+    /* Skills badges row */
+    .badges{display:flex;flex-wrap:wrap;gap:10px}
+    .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.02);font-weight:600}
+    .badge img{height:18px}
+
+    /* Experience */
+    .exp-item{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent);border:1px solid rgba(255,255,255,0.02);}
+    .meta-compact{color:var(--muted);font-size:13px}
+
+    /* Contact */
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:#dfeefb;text-decoration:none;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;grid-auto-rows:auto;text-align:center}
+      .grid-2{grid-template-columns:1fr}
+      .avatar{width:150px;height:150px;margin:0 auto}
+    }
+
+    /* Subtle entrance animations */
+    .animate{opacity:0;transform:translateY(8px);animation:pop .6s ease forwards}
+    .animate.delay-1{animation-delay:.08s}
+    .animate.delay-2{animation-delay:.16s}
+    .animate.delay-3{animation-delay:.24s}
+    @keyframes pop{to{opacity:1;transform:none}}
+
+    /* Floating decor */
+    .glow{position:absolute;right:-120px;top:-80px;pointer-events:none;opacity:.08;filter:blur(40px)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="card animate">
+        <div class="avatar" aria-hidden="true">
+          <!-- If you have a photo, replace src with your photo URL -->
+          <img src="img/Imagem do WhatsApp de 2025-08-29 à(s) 19.26.35_4cbc23c5.jpg" alt="Avatar de Ryan" />
+        </div>
+      </div>
+
+      <div class="card" style="padding:20px" >
+        <h1 class="animate">Ryan Teodoro <span style="color:var(--accent);font-weight:700">— Estudante</span></h1>
+        <p class="subtitle animate delay-1">Estudante de Análise e Desenvolvimento de Sistemas na Fatec Ipiranga • Ex-aluno da Etec Heliópolis</p>
+        <p class="lead animate delay-2">Sou estudante apaixonado por tecnologia e inovação. Gosto de construir soluções simples e eficazes, aprender constantemente e colaborar em equipe.</p>
+
+        <div class="actions animate delay-3">
+          <a class="btn btn-primary" href="https://github.com/RyanTeodoro2005" target="_blank" rel="noopener">Ver GitHub</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/ryan-teodoro-38bab62ab" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="grid-2">
+      <div>
+        <div class="card animate" style="padding:22px">
+          <h2>Sobre mim</h2>
+          <p class="lead">Olá! Sou <strong>Ryan Teodoro</strong>. Estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Fatec Ipiranga. Concluí o ensino técnico na Etec Heliópolis e já atuei como Aprendiz em Auxiliar Administrativo na EY (Ernst & Young), onde desenvolvi habilidades de organização, comunicação e trabalho em equipe.</p>
+
+          <h3 style="margin-top:18px">Qualidades</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+            <div class="badge">💡 Criativo</div>
+            <div class="badge">⚡ Proativo</div>
+            <div class="badge">🤝 Colaborativo</div>
+            <div class="badge">📈 Em evolução</div>
+          </div>
+
+          <h3 style="margin-top:18px">Tecnologias</h3>
+          <div class="badges" style="margin-top:10px">
+            <div class="badge"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"/> Java</div>
+            <div class="badge"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python"/> Python</div>
+            <div class="badge"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="js"/> JavaScript</div>
+            <div class="badge"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html"/> HTML</div>
+            <div class="badge"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css"/> CSS</div>
+            <div class="badge"><img src="https://www.svgrepo.com/show/499816/database.svg" alt="mysql"/> MySQL</div>
+          </div>
+
+          <h3 style="margin-top:18px">Projetos</h3>
+          <p class="meta">Coloque aqui seus projetos: nome, descrição curta e link para o repositório ou demonstração. Exemplos: pequenos sistemas em Java, scripts em Python, páginas web em HTML/CSS/JS.</p>
+
+        </div>
+
+        <div class="card animate" style="margin-top:18px;padding:18px">
+          <h2>Experiência</h2>
+          <div class="exp-item" style="margin-top:10px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+              <div>
+                <strong>Aprendiz — Auxiliar Administrativo</strong>
+                <div class="meta-compact">EY (Ernst & Young)</div>
+              </div>
+              <div class="meta-compact">Período: Aprendizado</div>
+            </div>
+            <p style="margin-top:8px;color:var(--muted)">Atuei em rotinas administrativas, organização de documentos, apoio à comunicação interna e participação em atividades de equipe, desenvolvendo disciplina e habilidades de atenção aos detalhes.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card animate">
+          <h3>Contato</h3>
+          <div class="contact-list" style="margin-top:10px">
+            <a href="mailto:ryanbryansilvateodoro@gmail.com">✉️ ryanbryansilvateodoro@gmail.com</a>
+            <a href="https://www.linkedin.com/in/ryan-teodoro-38bab62ab" target="_blank" rel="noopener">🔗 LinkedIn</a>
+            <a href="https://github.com/RyanTeodoro2005" target="_blank" rel="noopener">🐙 GitHub</a>
+          </div>
+
+          <h3 style="margin-top:16px">Idiomas</h3>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+            <div class="meta-compact">🇧🇷 Português — Nativo</div>
+            <div class="meta-compact">🇺🇸 Inglês — Intermediário</div>
+            <div class="meta-compact">🇪🇸 Espanhol — Básico</div>
+          </div>
+
+          <h3 style="margin-top:16px">Links rápidos</h3>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <a class="btn btn-outline" href="https://github.com/RyanTeodoro2005" target="_blank">Ver projetos</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/ryan-teodoro-38bab62ab" target="_blank">Mensagem no LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="card animate" style="margin-top:16px;padding:14px;text-align:center">
+          <h3>Disponível para oportunidades</h3>
+          <p class="meta" style="margin-top:8px">Busco boas oportunidades na área de tecnologia — estágio ou vagas iniciais que permitam aprendizado e crescimento.</p>
+          <a class="btn btn-primary" href="mailto:ryanbryansilvateodoro@gmail.com" style="margin-top:10px;display:inline-block">Entrar em contato</a>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>Feito com ♥ por <strong>Ryan Teodoro</strong> — © <span id="year"></span></p>
+    </footer>
+  </div>
+
+  <svg class="glow" width="480" height="240" viewBox="0 0 480 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="120" cy="60" r="120" fill="url(#g)" />
+    <defs>
+      <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 60) scale(120)">
+        <stop stop-color="#7C5CFF" stop-opacity="1"/>
+        <stop offset="1" stop-color="#00C8FF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <script>
+    // small JS for year and simple keyboard accessibility
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // enable keyboard focus styles for btns
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('keyup', e=>{ if(e.key==='Enter') b.click() })
+    })
+
+    // simple lazy animation trigger
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.animate').forEach((el,i)=>{
+        el.style.animationDelay = (i*0.06)+'s'
+      })
+    })
+  </script>
+</body>
+</html>
